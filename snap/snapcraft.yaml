@@ -1,0 +1,97 @@
+name: yandex-browser
+base: core22
+version: '23.11.1.714'
+summary: Yandex browser
+description: |
+  A simple and fast browser with a sleek design and a serious approach to security. A single line for addresses and search queries. Checking downloaded files for viruses. Easy transfer of settings from another browser.
+
+grade: stable
+confinement: strict
+
+architectures:
+  - build-on: [amd64]
+    build-for: [amd64]
+
+plugs:
+  shared-memory:
+    private: true
+
+apps:
+  yandex-browser:
+    command: opt/yandex/browser/yandex-browser
+    plugs:
+      - browser-support
+      - desktop
+      - desktop-legacy
+      - gsettings
+      - hardware-observe
+      - home
+      - network
+      - network-bind
+      - network-control
+      - network-manager
+      - network-manager-observe
+      - network-observe
+      - network-setup-control
+      - network-setup-observe
+      - opengl
+      - process-control
+      - pulseaudio
+      - steam-support
+      - system-observe
+      - unity7
+      - upower-observe
+      - wayland
+      - x11
+
+parts:
+  yandex-browser:
+    plugin: dump
+    source-type: deb
+    source: Yandex.deb
+    stage-packages:
+      - libappindicator3-1
+      - libc6
+      - libdbus-1-3
+      - libexpat1
+      - libfontconfig1
+      - libfreetype6
+      - libgcc-s1
+      - libgdk-pixbuf2.0-0
+      - libglib2.0-0
+      - libnspr4
+      - libpangocairo-1.0-0
+      - libstdc++6
+      - libxcursor1
+      - libxi6
+      - libxrender1
+      - libxss1
+      - libxtst6
+      # -
+      - libasound2
+      - libatspi2.0-0
+      - libatk1.0-0
+      - libatk-bridge2.0-0
+      - libcairo2
+      - libcups2
+      - libcurl4
+      - libegl-mesa0
+      - libglx0
+      - libgtk-3-0
+      - libicu70
+      - libnss3
+      - libpango-1.0-0
+      - libqt5gui5
+      - libqt5widgets5
+      - libqt6gui6
+      - libqt6widgets6
+      - libssl3
+      - libx11-6
+      - libx11-xcb1
+      - libxcb1
+      - libxcomposite1
+      - libxdamage1
+      - libxext6
+      - libxfixes3
+      - libxkbcommon0
+      - libxrandr2

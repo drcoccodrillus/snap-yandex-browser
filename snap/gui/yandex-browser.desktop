@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=Yandex browser
+Comment=A simple and fast browser with a sleek design and a serious approach to security
+Exec=yandex-browser
+Icon=${SNAP}/meta/gui/yandex-browser.png
+Terminal=false
