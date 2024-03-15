@@ -65,7 +65,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Product Name Screen Shot][product-screenshot]](https://snapcraft.io/yandex-browser)
 
 Yandex Browser is a browser that combines a minimal design with sophisticated technology to make the web faster, safer, and easier.
 
