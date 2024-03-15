@@ -99,9 +99,9 @@ For installing the snap from a local file, first of all you need to build the `.
 
 `snapcraft`
 
-Once the `yandex-browser_23.11.1.714_amd64.snap` file is built, run the following command to install the app:
+Once the `yandex-browser_24.1.1.940_amd64.snap` file is built, run the following command to install the app:
 
-`snap install yandex-browser_23.11.1.714_amd64.snap --dangerous`
+`snap install yandex-browser_24.1.1.940_amd64.snap --dangerous`
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
