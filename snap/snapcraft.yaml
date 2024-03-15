@@ -1,6 +1,6 @@
 name: yandex-browser
 base: core22
-version: '23.11.1.714'
+version: '23.11.1.714-r1'
 summary: Yandex browser
 description: |
   A simple and fast browser with a sleek design and a serious approach to security. A single line for addresses and search queries. Checking downloaded files for viruses. Easy transfer of settings from another browser.
@@ -16,10 +16,16 @@ plugs:
   shared-memory:
     private: true
 
+slots:
+  yandex-mpris:
+    interface: mpris
+    name: org.mpris.MediaPlayer2.Player
+
 apps:
   yandex-browser:
     command: opt/yandex/browser/yandex-browser --no-sandbox
     plugs:
+      - alsa
       - audio-playback
       - audio-record
       - bluez
@@ -44,7 +50,7 @@ apps:
       - opengl
       - password-manager-service
       - process-control
-      - pulseaudio
+      #- pulseaudio               # Deprecated in favor of audio-playback and audio-record
       - raw-usb
       - removable-media
       - screen-inhibit-control
@@ -56,12 +62,14 @@ apps:
       - upower-observe
       - wayland
       - x11
+    slots:
+      - yandex-mpris
 
 parts:
   yandex-browser:
     plugin: dump
     source-type: deb
-    source: Yandex.deb
+    source: yandex-browser-stable-23.11.1.714-1.deb
     stage-packages:
       - libappindicator3-1
       - libc6
@@ -72,8 +80,14 @@ parts:
       - libgcc-s1
       - libgdk-pixbuf2.0-0
       - libglib2.0-0
+      - libgstreamer1.0-0
+      - gstreamer1.0-plugins-base
+      - gstreamer1.0-plugins-good
+      - gstreamer1.0-plugins-bad
+      - gstreamer1.0-libav
       - libnspr4
       - libpangocairo-1.0-0
+      - libpulse0
       - libstdc++6
       - libxcursor1
       - libxi6
