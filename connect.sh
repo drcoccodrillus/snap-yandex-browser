@@ -6,7 +6,6 @@ snap connect yandex-browser:bluez
 snap connect yandex-browser:camera
 snap connect yandex-browser:joystick
 snap connect yandex-browser:mount-observe
-snap connect yandex-browser:mpris
 snap connect yandex-browser:password-manager-service
 snap connect yandex-browser:raw-usb
 snap connect yandex-browser:removable-media
@@ -20,5 +19,4 @@ snap connect yandex-browser:network-observe
 snap connect yandex-browser:network-setup-control
 snap connect yandex-browser:network-setup-observe
 snap connect yandex-browser:process-control
-#snap connect yandex-browser:pulseaudio
 snap connect yandex-browser:system-observe
